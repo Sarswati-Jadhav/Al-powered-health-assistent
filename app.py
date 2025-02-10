@@ -14,7 +14,7 @@ def health_chatbot(user_input):
     elif "Medication" in user_input:  # Fixed typo from "Madication"
         return "It is important to take medicines as prescribed by the doctor. If you have concerns, please consult the doctor."
     else:
-        response = chatbot(user_input, max_length=500, num_return_sequences=1)  # Fixed typo
+        response = chatbot(user_input, max_length=500, num_return_sequences=1) 
         return response[0]["generated_text"]
     return ""
 
@@ -26,9 +26,9 @@ def main():
         if user_input:
             st.write("User: ", user_input)
             with st.spinner("Processing your request..., please wait"):
-                response = health_chatbot(user_input)  # Fixed variable name
-            st.write("HealthCare Chatbot:", response)  # Fixed variable name
-            print(response)  # Fixed variable name
+                response = health_chatbot(user_input)  
+            st.write("HealthCare Chatbot:", response) 
+            print(response)  
         else:
             st.write("Please enter a message to get a response.")
 
